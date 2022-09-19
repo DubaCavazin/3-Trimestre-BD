@@ -1,0 +1,46 @@
+1) O que é e para que serve o JOIN? Quando devemos utilizar?
+2) Sintaxe JOIN:
+
+1-  O comando JOIN do SQL é importante no uso de manipulação de tabelas. 
+Trata-se de uma forma de lidar com os dados, buscando relacionar dois conjuntos de dados na base, o que é muito útil em diversas operações. 
+Por isso, serve como uma forma de filtrar os dados e selecionar apenas uma parte do que se deseja ver e analisar. 
+Existem atualmente cinco tipos de JOIN, sendo eles o INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN e CROSS JOIN.
+
+
+2- Sintaxe:
+
+	Inner JOIN:
+
+Cria uma tabela que traz somente os  valores que estão em ambas as tabelas iniciais.
+
+		FROM tabela1 AS t
+INNER JOIN tabela2 AS tp
+ON t.produto = tp.produto 
+	Left JOIN:
+
+Resulta em uma tabela que exibe somente os itens da tabela da esquerda, incluindo os itens em interseção com a tabela direita.
+
+		FROM tabela1 AS t
+LEFT JOIN tabela2 AS tp
+ON t.produto = tp.produto 
+
+	Right JOIN:
+
+Pega os dados completos da tabela da direita, incluindo os que também estão na tabela da direita.
+
+		FROM tabela1 AS t
+RIGHT JOIN tabela2 AS tp
+ON t.produto = tp.produto 
+
+	Full JOIN:
+O FULL JOIN é o comando para pegar todos os valores das duas tabelas e unir em uma única resultante.
+
+		FROM tabela1 AS t
+FULL OUTER JOIN tabela2 AS tp
+ON t.produto = tp.produto
+Cross JOIN:
+O CROSS JOIN executa uma operação mais complexa, em que todos os itens de uma tabela estão associados a cada item da outra. 
+
+	FROM tabela1 AS t
+CROSS JOIN tabela2 AS tp
+ 		WHERE t.id = 1 OR tp.id = 1
